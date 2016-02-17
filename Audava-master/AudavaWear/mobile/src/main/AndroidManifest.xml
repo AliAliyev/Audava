@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ali.audavaproject" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_audava_red"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".ActivityRecord"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ActivityAlbumsListView"
+            android:label="Albums"
+            android:parentActivityName=".ActivityRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ActivitySettings"
+            android:label="Settings"
+            android:parentActivityName=".ActivityRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ActivityAccountLogin"
+            android:label="Log in"
+            android:parentActivityName=".ActivityRecord"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ActivityTracksListView"
+            android:label="TracksListView"
+            android:parentActivityName=".ActivityAlbumsListView"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboard">
+            <intent-filter>
+                <!-- Change this to be db- followed by your app key -->
+                <data android:scheme="db-2muzb3gk4xshp43" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

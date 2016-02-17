@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.ali.audavaproject"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile files('src/main/libs/dropbox-android-sdk-1.6.3.jar')
+    compile 'com.google.android.support:wearable:1.1.0'
+    compile 'com.google.android.gms:play-services-wearable:7.0.0'
+    compile files('src/main/libs/gson-2.3.1.jar')
+    compile files('src/main/libs/json_simple-1.1.jar')
+    compile 'Teleport:teleportlib:0.1.4'
+}

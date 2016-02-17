@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".AudavaSettingPage"
+    android:background="#ffa4d8c7"
+    android:id="@+id/layout">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffa4d8c7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1"
+        android:layout_margin="10dp"
+        android:id="@+id/linearlayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/dropbox" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Dropbox"
+                android:id="@+id/textView2"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:clickable="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/dropboxLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Auto-upload"
+                android:id="@+id/textView3"
+                android:layout_weight="1.00"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dropboxCheckbox"
+                android:checked="false" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:id="@+id/dropboxSignin"
+            android:layout_gravity="center_horizontal"
+            android:background="#91ffffff"
+            android:paddingTop="5dp"
+            android:layout_marginTop="10dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:id="@+id/textView7"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:clickable="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/recordCheckbox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Record on Launch"
+                android:id="@+id/textView6"
+                android:layout_weight="1.00"
+                android:layout_gravity="center"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RecordBox"
+                android:checked="false" />
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sample rate : 8kHz"
+            android:id="@+id/sampleRatebtn"
+            android:layout_weight="0.17"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:gravity="left|center_vertical" />
+
+        <TextView
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:text="Higher sample rate = better quality and larger file size"
+            android:id="@+id/sampleInfo"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:paddingLeft="2dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:id="@+id/textView4"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:freezesText="true"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Version\n\n1.0.0"
+            android:id="@+id/textView5"
+            android:textColor="#ff000000"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ff7d938b"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+</RelativeLayout>

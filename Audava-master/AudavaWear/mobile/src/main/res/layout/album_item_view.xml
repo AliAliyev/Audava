@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlbumListView"
+    android:paddingLeft="3dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/album_imageView"
+        android:src="@drawable/story_album"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="false"
+        android:minHeight="80dp"
+        android:maxHeight="80dp"
+        android:maxWidth="82dp"
+        android:minWidth="82dp" />
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Default Story Album"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/album_imageView"
+        android:paddingLeft="7dp"
+        android:textStyle="bold"
+        android:paddingTop="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/album_description"
+        android:id="@+id/album_description"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/album_imageView"
+        android:paddingLeft="8dp"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/album_imageView" />
+
+</RelativeLayout>
